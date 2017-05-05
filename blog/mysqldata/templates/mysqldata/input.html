@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Data Input: Form</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<!-- The alert box to be shown when the submit button is clicked-->
+	<div class = "container">
+		<div class="jumbotron">
+		<h1>Enter Your Information Below :-</h1><br>
+    <form action="{% url 'newuser' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <hr><br><input type="submit" class = "btn btn-info" value="Submit">
+    	</div>
+    </div>
+    </form>
+</body>
+</html>
